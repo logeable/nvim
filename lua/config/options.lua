@@ -7,7 +7,6 @@ opt.shiftwidth = 2
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
-opt.clipboard = "unnamed"
 opt.mouse:append("a")
 opt.splitright = true
 opt.splitbelow = true
