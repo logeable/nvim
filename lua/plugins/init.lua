@@ -42,10 +42,25 @@ return {
     lazy = true,
   },
   {
+    'linrongbin16/lsp-progress.nvim',
+    config = function()
+      require('lsp-progress').setup()
+    end
+  },
+  {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-      require("lualine").setup()
+      require("lualine").setup({
+        sections = {
+          lualine_c = { 
+            function()
+              -- invoke `progress` here.
+              return require('lsp-progress').progress()
+            end
+          }
+        }
+      })
     end
   }
 }
