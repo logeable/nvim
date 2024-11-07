@@ -14,8 +14,8 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     event = "VeryLazy",
     keys = {
-      { "<leader>p", ":Telescope find_files<CR>", desc = "Find files"},
-      { "<leader>P", ":Telescope live_grep<CR>", desc = "Grep files"}
+      { "<leader>p", ":Telescope find_files<CR>", desc = "Find files" },
+      { "<leader>P", ":Telescope live_grep<CR>",  desc = "Grep files" }
     },
   },
   {
@@ -53,7 +53,7 @@ return {
     config = function()
       require("lualine").setup({
         sections = {
-          lualine_c = { 
+          lualine_c = {
             function()
               -- invoke `progress` here.
               return require('lsp-progress').progress()
@@ -62,5 +62,15 @@ return {
         }
       })
     end
+  },
+  {
+    'stevearc/conform.nvim',
+    opts = {
+      format_on_save = {
+        -- These options will be passed to conform.format()
+        timeout_ms = 500,
+        lsp_format = "fallback",
+      },
+    }
   }
 }
