@@ -2,8 +2,8 @@ local opt = vim.opt
 
 opt.autoindent = true
 opt.expandtab = true
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.shiftwidth = 4
+opt.softtabstop = 4
 opt.number = true
 opt.relativenumber = true
 opt.cursorline = true

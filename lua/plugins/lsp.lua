@@ -1,5 +1,10 @@
 return {
   {
+    "williamboman/mason.nvim",
+    event = "VeryLazy",
+    config = true
+  },
+  {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup {
@@ -15,5 +20,16 @@ return {
       lspconfig["gopls"].setup({})
       lspconfig["rust_analyzer"].setup({})
     end
+  },
+  {
+    'nvimdev/lspsaga.nvim',
+    event = "LspAttach",
+    config = function()
+      require('lspsaga').setup({})
+    end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- optional
+      'nvim-tree/nvim-web-devicons',     -- optional
+    }
   }
 }

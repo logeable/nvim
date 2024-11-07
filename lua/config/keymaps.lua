@@ -1,0 +1,7 @@
+vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", {desc = "Code action"})
+vim.keymap.set('n', '<leader>ck', '<cmd>Lspsaga hover_doc<CR>', {desc = "Hover doc"})
+vim.keymap.set('n', '<leader>cr', '<cmd>Lspsaga rename<CR>', {desc = "Rename"})
+vim.keymap.set('n', '<leader>cdl', '<cmd>Lspsaga show_line_diagnostics<CR>', {desc = "Diagnostic line"})
+vim.keymap.set('n', '<leader>cdb', '<cmd>Lspsaga show_buf_diagnostics<CR>', {desc = "Diagnostic buffer"})
+vim.keymap.set('n', '<leader>cdw', '<cmd>Lspsaga show_workspace_diagnostics<CR>', {desc = "Diagnostic workspace"})
+vim.keymap.set('n','<leader>t', '<cmd>Lspsaga term_toggle<CR>', {desc = "Toggle float termiall"})
